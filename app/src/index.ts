@@ -1,0 +1,14 @@
+import express from "express";
+import { Request, Response } from "express";
+
+const app = express();
+const port = 3000;
+
+
+app.get("/", (_req: Request, res: Response) => {
+  res.send("Hello from Docker + TypeScript 🚀");
+});
+
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Server running on port ${port}`);
+  });
